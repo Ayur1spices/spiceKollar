@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Slideshow functionality
   const images = [
-    'assets/image/photo1.jpg',
-    'assets/image/photo10.jpg',
-    'assets/image/photo44.jpg',
-    'assets/image/photo4.png'
+    'asset/image/photo1.jpg',
+    'asset/image/photo10.jpg',
+    'asset/image/photo44.jpg',
+    'asset/image/photo4.png'
   ];
   let currentImageIndex = 0;
   const clipperElement = document.querySelector('.image-clipper');
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const spices = [
     {
       name: "Turmeric Milk",
-      image: "./assets/image/turmeric_milk.jpg",
+      image: "./asset/image/turmeric_milk.jpg",
       intro: "Known as Golden Milk around the world, this ancient drink is India’s most famous showcase of turmeric’s strength and purity.",
       details: `
         <h1> Turmeric Milk</h1>
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Jeera Rice",
-      image: "./assets/image/jeera_rice.jpg",
+      image: "./asset/image/jeera_rice.jpg",
       intro: "Jeera rice is where cumin leads — an everyday favorite with bold simplicity and timeless appeal.",
       details: `
         <h1>Jeera Rice</h1>
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Cardamom Tea",
-      image: "./assets/image/cardamom_tea.jpg",
+      image: "./asset/image/cardamom_tea.jpg",
       intro: "Sweet, warm, and comforting, cardamom tea is a traditional Indian beverage where cardamom shines as the key flavor.",
       details: `
         <h1> Cardamom Tea</h1>
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Cinnamon Roll",
-      image: "./assets/image/cinnamon_roll.jpg",
+      image: "./asset/image/cinnamon_roll.jpg",
       intro: "Soft, sticky, and swirling with spice, cinnamon rolls are a global tribute to the richness of true cinnamon.",
       details: `
         <h1>Cinnamon Roll</h1>
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Laung Pulao",
-      image: "./assets/image/clove_pulav.jpg",
+      image: "./asset/image/clove_pulav.jpg",
       intro: "In this delicate rice dish, the strong and spicy notes of clove take the lead — bold but balanced.",
       details: `
         <h1>Laung Pulao</h1>
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Pepper Chicken",
-      image: "./assets/image/pepper_chicken.jpg",
+      image: "./asset/image/pepper_chicken.jpg",
       intro: "Fiercely flavorful and proudly Keralite, Pepper Chicken puts black pepper at the center of the culinary spotlight.",
       details: `
         <h1>Pepper Chicken</h1>

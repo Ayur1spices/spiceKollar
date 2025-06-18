@@ -572,7 +572,7 @@
     max-height: 1300px;
     border-radius: 50%;
     transition: transform 0.5s ease-in-out;
-    background-image: url('assets/ring.png');
+    background-image: url('asset/ring.png');
     background-size: var(--ring-size);
     background-position: center;    
     background-repeat: no-repeat;
