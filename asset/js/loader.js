@@ -102,7 +102,7 @@ function addLoaderAnimationStyles() {// in this fuunction we adding the loaders 
     height: 28px;
     margin: 2px;
     border-radius: 0px;
-    background: #C6DEC4;;
+    background:#6BC663;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -203,16 +203,35 @@ function initLoaderUI() { // in here the  loader will init
   }
 }
 
-function showLoader() {//to run the animation
+function showLoader() {
   $('.mainLoader').fadeIn();
+
+  // Disable interaction
+  $('body').css({
+    'pointer-events': 'none',
+    'touch-action': 'none',
+    'overflow': 'hidden' // 🔒 Prevent scrolling
+  });
+
+  // Prevent touch and wheel scroll events
+  $(document).on('touchmove.disableScroll wheel.disableScroll', function(e) {
+    e.preventDefault();
+  });
 }
-function hideLoader() {// to exit the animation
+
+function hideLoader() {
   $('.mainLoader').fadeOut();
+
+  // Re-enable interaction
+  $('body').css({
+    'pointer-events': '',
+    'touch-action': '',
+    'overflow': ''
+  });
+
+  // Remove scroll blockers
+  $(document).off('touchmove.disableScroll wheel.disableScroll');
 }
-// $(document).ready(function (){// eg code to run the animation
-//     $('#BTN').click( function (){
-//         initLoaderUI();
-//         showLoader();
-//     })
-// })
+
+
 
