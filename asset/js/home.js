@@ -1,5 +1,13 @@
 // image notch
+initLoaderUI();
 
+// Show loader as early as possible
+showLoader();
+
+// Hide loader when EVERYTHING (including images) is loaded
+$(window).on("load", function () {
+  hideLoader();
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Slideshow script loaded');
