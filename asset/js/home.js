@@ -1,5 +1,23 @@
 // image notch
+initLoaderUI();
 
+// Show loader as early as possible
+showLoader();
+
+// Hide loader when EVERYTHING (including images) is loaded
+$(window).on("load", function () {
+  hideLoader();
+});
+
+function changeImage() {
+  clipperElement.classList.add('fade');
+  setTimeout(() => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    clipperElement.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+    clipperElement.classList.remove('fade');
+    console.log('Image changed to:', images[currentImageIndex]);
+  }, fadeDuration);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Slideshow script loaded');
@@ -32,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Start slideshow
+  changeImage();
   setInterval(changeImage, slideInterval);
 
   /* JavaScript for functionality */
