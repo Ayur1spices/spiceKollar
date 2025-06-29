@@ -275,19 +275,8 @@ header img{
     font-size: 7em;
     font-weight: 200;
 }
-.banner .image{
-    width: 100%;
-    height: 600px;
-    background-image: url(images/banner.png);
-    position: relative;
-}
-.banner .image img{
-    position: absolute;
-    height: 130%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0px;
-}
+
+
 .grid figure img{
     width: 100%;
 }
@@ -483,12 +472,19 @@ footer .content{
         filter: blur(40px);
     }
 }
+
+/* ##################################### 
+#######################################
+###################################
+####################################*/
 /* Universal responsiveness for all screens */
 @media (max-width: 480px) {
   /* Small phones (e.g., iPhone SE, ~320px–480px) */
   .hero-text {
-    font-size: 12vw;
+    font-size: 32vw;
     padding: 0.5rem;
+    margin-bottom: 300px;
+
   }
   .mid-tagline {
     font-size: 0.6rem;
@@ -561,6 +557,9 @@ footer .content{
   .bird img {
     width: 40%;
     margin: 0;
+    margin-left: -10px;
+    margin-top: -860px;
+
   }
   .banner .content h1 {
     font-size: 2.5em;
