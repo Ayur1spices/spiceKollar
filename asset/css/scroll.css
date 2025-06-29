@@ -1,242 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f4f1ec;
-  color: #1a1a1a;
-}
-
-header {
-  position: relative;
-  height: 100vh;
-  background: url('/asset/image/banner_00.jpg') no-repeat center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hero-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 30vw;
-  text-align: center;
-  color: rgba(244, 241, 236, 0.85);
-  mix-blend-mode: luminosity;
-  padding: 0 2rem 2rem;
-}
-
-.mid-tagline {
-  background-color: #f4f1ec;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #3c3c3c;
-}
-
-.text-intro {
-  text-align: center;
-  padding: 4rem 4rem 17rem;
-  font-size: 2.7rem;
-  line-height: 3.2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: 'Playfair Display', serif;
-}
-
-.core-section {
-  background-color: #2b241f;
-  color: #a6a6a6;
-  text-align: center;
-  padding: 6rem 2rem;
-  position: relative;
-}
-
-.core-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
-  margin-bottom: 4rem;
-  letter-spacing: 0.1rem;
-}
-
-/* Gallery layout like the reference image */
-.core-visual-layout {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 1000px;
-  margin: 0 auto;
-}
-
-.item {
-  position: absolute;
-  width: 120px;
-  height: 180px;
-}
-
-.item img {
-  width: 120%;
-  height: 120%;
-  object-fit: cover;
-  display: block;
-  border-radius: 5px;
-}
-
-/* Precise placement based on visual structure */
-.item-1 { top: 0%; left: 5%; }
-.item-2 { top: 0%; left: 35%; }
-.item-3 { top: 0%; left: 65%; }
-.item-4 { top: 0%; right: 5%; }
-.item-5.center { top: 35%; left: 50%; transform: translateX(-50%); }
-.item-6 { top: 35%; left: 20%; }
-.item-7 { top: 35%; right: 20%; }
-.item-8 { top: 65%; left: 35%; }
-.item-9 { top: 65%; right: 35%; }
-
-.chapter-section {
-  background-color: #2b241f;
-  color: #999;
-  text-align: center;
-  padding: 6rem 2rem;
-  font-family: 'Playfair Display', serif;
-}
-
-.chapter-section span {
-  font-size: 0.9rem;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  display: block;
-}
-
-.chapter-section h3 {
-  font-size: 3rem;
-  line-height: 1.4;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.quality-section {
-  background-color: #2b241f;
-  text-align: center;
-  overflow: hidden;
-  padding-top: 44px;
-}
-
-.quality-section img {
-  max-width: 130%;
-  height: auto;
-  object-fit: cover;
-  margin-left: -44px;
-  display: block;
-}
-
-.consultancy-section {
-  background-color: #f4f1ec;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.consultancy-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #2b241f;
-  margin-bottom: 3rem;
-}
-
-.consultancy-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto 2rem;
-}
-
-.consultancy-images img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.consultancy-section p {
-  font-size: 1.2rem;
-  line-height: 2;
-  max-width: 800px;
-  margin: 0 auto;
-  font-family: 'Playfair Display', serif;
-}
-
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 4rem 1rem 2rem;
-  color: #999;
-}
-#connectionCanvas {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-.core-visual-layout {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 1000px;
-  margin: 0 auto;
-  z-index: 1; /* above canvas */
-}
-.item {
-  position: absolute;
-  width: 120px;
-  height: 180px;
-  z-index: 2;
-}
-.bird {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-}
-.bird img {
-  width: 60%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  margin-top: 1900px;
-  margin-left: -400px;
-}
-
-
-/* ###################################
-###################################
-###################################
-##################################
-################################## */
-
-
-/* scroll css */
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Odibee+Sans&display=swap');
 html, body{
     scroll-behavior: smooth;
 }
 body{
-  
+    background-color: #CBCBCB;
     margin: 0;
     font-size: 14px;
     color: #2E373A;
-    
+    font-family: "Libre Baskerville", sans-serif;
 }
-
 *{
     padding: 0;
     margin: 0;
@@ -258,7 +30,7 @@ header img{
     height: 40px;
 }
 .banner .content{
-
+    font-family: "Odibee Sans", sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -298,10 +70,6 @@ header img{
     grid-template-rows: repeat(var(--row), 100px);
     margin-top: 50px;
     gap: 50px;
-}
-.grid p{
-        font-family: "Libre Baskerville", sans-serif;
-
 }
 .grid-1 figure:nth-child(1){
     grid-column: 2 / 6;
