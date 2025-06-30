@@ -2,12 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
+
 }
+
+/* this is for testing overflow */
+/* * {
+  outline: 1px solid red;
+} */
 
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f4f1ec;
   color: #1a1a1a;
+  
+
 }
 
 header {
@@ -333,6 +342,7 @@ header img{
 .grid-3{
     --row: 6;
     font-size: 10em;
+    padding-top: 300px;
 }
 .grid-3 div{
     grid-column: 2/ 6;
@@ -478,42 +488,85 @@ footer .content{
 ###################################
 ####################################*/
 /* Universal responsiveness for all screens */
-@media (max-width: 480px) {
-  /* Small phones (e.g., iPhone SE, ~320px–480px) */
-  .hero-text {
-    font-size: 32vw;
-    padding: 0.5rem;
-    margin-bottom: 300px;
+/* Mobile view: Clean, stacked layout, no effects */
+@media (max-width: 768px) {
+  /* Disable animations and canvas */
+  /* .autoRotate, .autoShow, .autoBLur {  */
+    /* animation: none !important;  */
+    /* transform: none !important;  */
+     /* opacity: 1 !important;  */
+     /* filter: none !important;  */
+   /* }  */
+  #connectionCanvas {
+    display: none;
+  }
 
+  /* General: Prevent overflow */
+  body {
+    overflow-x: hidden;
   }
+  main {
+    padding: 10px;
+    width: 100%;
+  }
+
+  /* Header: Compact hero */
+  header {
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero-text {
+    font-size: 8vw;
+    padding: 1rem;
+    color: #f4f1ec;
+    mix-blend-mode: normal;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Mid Tagline: Clean and centered */
   .mid-tagline {
-    font-size: 0.6rem;
-    padding: 1rem 0.5rem;
+    font-size: 0.7rem;
+    padding: 1rem;
+    letter-spacing: 0.5px;
+    background-color: #f4f1ec;
+    text-align: center;
   }
+
+  /* Text Intro: Readable and centered */
   .text-intro {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    padding: 1.5rem 0.5rem 5rem;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+    text-align: center;
   }
+
+  /* Core Section: 2-column grid, centered images */
   .core-section {
-    padding: 2rem 0.5rem;
+    padding: 1.5rem 1rem;
+    background-color: #2b241f;
   }
   .core-section h2 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    color: #a6a6a6;
+    text-align: center;
   }
   .core-visual-layout {
-    height: auto;
-    max-width: 100%;
-    padding: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
   }
   .item {
     position: static;
-    width: 80px;
+    width: 100%;
     height: 120px;
     transform: none;
   }
@@ -521,157 +574,35 @@ footer .content{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 3px;
   }
+  .item-5.center {
+    grid-column: 1 / -1; /* Span full width for perfect centering */
+    height: 150px; /* Slightly larger for emphasis */
+    margin-left: 170px;
+  }
+
+  /* Chapter Section: Simple and centered */
   .chapter-section {
-    padding: 2rem 0.5rem;
+    padding: 1.5rem 1rem;
+    background-color: #2b241f;
+        padding-bottom: 200px;
+    padding-top: 200px;
   }
   .chapter-section h3 {
     font-size: 1.3rem;
     line-height: 1.3;
-  }
-  .quality-section img {
-    max-width: 100%;
-    margin-left: 0;
-  }
-  .consultancy-section {
-    padding: 2rem 0.5rem;
-  }
-  .consultancy-title {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-  }
-  .consultancy-images {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-  .consultancy-section p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-  .bird {
-    position: static;
-    transform: none;
-    margin: 0.5rem auto;
+    color: #999;
     text-align: center;
+    
   }
-  .bird img {
-    width: 40%;
-    margin: 0;
-    margin-left: -10px;
-    margin-top: -860px;
-
-  }
-  .banner .content h1 {
-    font-size: 2.5em;
-  }
-  .banner .content .right h2 {
-    font-size: 1.5em;
-  }
-  .banner .image {
-    height: 200px;
-  }
-  .banner .image img {
-    height: 100%;
-    width: auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .grid-1, .grid-2 {
-    display: block;
-    margin-top: 10px;
-    gap: 10px;
-  }
-  .grid-1 figure, .grid-2 figure {
-    margin: 0;
-    width: 100%;
-  }
-  .grid-1 h2 {
-    font-size: 2em;
-    margin: 0.5rem 0;
-  }
-  .grid-2 p {
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
-  }
-  .grid-3 {
-    font-size: 2.5em;
-    display: block;
-    margin-bottom: 30px;
-  }
-  .footer-logo img {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  /* Medium phones (e.g., iPhone 12, Galaxy S-series, ~481px–768px) */
-  .hero-text {
-    font-size: 15vw;
-    padding: 1rem;
-  }
-  .mid-tagline {
+  .chapter-section span {
     font-size: 0.7rem;
-    padding: 1.5rem 0.5rem;
+    margin-bottom: 1rem;
+
   }
-  .text-intro {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding: 2rem 1rem 6rem;
-  }
-  .core-section {
-    padding: 3rem 1rem;
-  }
-  .core-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  .core-visual-layout {
-    height: auto;
-    max-width: 100%;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .item {
-    position: static;
-    width: 100px;
-    height: 150px;
-    transform: none;
-  }
-  .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .chapter-section {
-    padding: 3rem 1rem;
-  }
-  .chapter-section h3 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-  .quality-section img {
-    max-width: 100%;
-    margin-left: 0;
-  }
-  .consultancy-section {
-    padding: 3rem 1rem;
-  }
-  .consultancy-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  .consultancy-images {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .consultancy-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+
+  /* Bird: Centered, no margins */
   .bird {
     position: static;
     transform: none;
@@ -680,175 +611,273 @@ footer .content{
   }
   .bird img {
     width: 50%;
+    max-width: 200px;
     margin: 0;
+    margin-left: -20px;
   }
-  .banner .content h1 {
-    font-size: 4em;
-  }
-  .banner .content .right h2 {
-    font-size: 2.5em;
-  }
-  .banner .image {
-    height: 300px;
-  }
-  .banner .image img {
-    height: 100%;
-    width: auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .grid-1, .grid-2 {
-    display: block;
-    margin-top: 20px;
-    gap: 20px;
-  }
-  .grid-1 figure, .grid-2 figure {
-    margin: 0;
-    width: 100%;
-  }
-  .grid-1 h2 {
-    font-size: 2.5em;
-    margin: 1rem 0;
-  }
-  .grid-2 p {
-    font-size: 1rem;
-    margin: 1rem 0;
-  }
-  .grid-3 {
-    font-size: 3em;
-    display: block;
-    margin-bottom: 50px;
-  }
-  .footer-logo img {
-    width: 100%;
-    max-width: 400px;
-  }
-}
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Tablets/large phones (e.g., iPad, Galaxy Tab, ~769px–1024px) */
-  .hero-text {
-    font-size: 20vw;
-    padding: 1.5rem;
-  }
-  .mid-tagline {
-    font-size: 0.8rem;
-    padding: 1.5rem 1rem;
-  }
-  .text-intro {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    padding: 3rem 1.5rem 8rem;
-  }
-  .core-section {
-    padding: 4rem 1.5rem;
-  }
-  .core-section h2 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
-  }
-  .core-visual-layout {
-    height: auto;
-    max-width: 100%;
-    padding: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-  .item {
-    position: static;
-    width: 120px;
-    height: 180px;
-    transform: none;
-  }
-  .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .chapter-section {
-    padding: 4rem 1.5rem;
-  }
-  .chapter-section h3 {
-    font-size: 2.5rem;
-    line-height: 1.4;
+  /* Quality Section: Full-width image */
+  .quality-section {
+    padding: 1rem 0;
+    background-color: #2b241f;
   }
   .quality-section img {
     max-width: 100%;
     margin-left: 0;
+    object-fit: cover;
   }
+
+  /* Consultancy Section: Stacked images */
   .consultancy-section {
-    padding: 4rem 1.5rem;
+    padding: 1.5rem 1rem;
+    background-color: #f4f1ec;
   }
   .consultancy-title {
-    font-size: 2.5rem;
-  }
-  .consultancy-images {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-  .consultancy-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-  }
-  .bird {
-    position: static;
-    transform: none;
-    margin: 1.5rem auto;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2b241f;
     text-align: center;
   }
-  .bird img {
-    width: 60%;
-    margin: 0;
+  .consultancy-images {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+  }
+  .consultancy-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .consultancy-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* Banner: Stacked, clean */
+  .banner .content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
   }
   .banner .content h1 {
-    font-size: 8em;
+    font-size: 2em;
+    margin-bottom: 0.5rem;
+  }
+  .banner .content .right {
+    transform: none;
+    text-align: center;
   }
   .banner .content .right h2 {
-    font-size: 4em;
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+  }
+  .banner .content .right p {
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
   .banner .image {
-    height: 400px;
+    height: 150px;
+    background: none; /* Remove background image for clarity */
+  }
+  .banner .image img {
+    width: 100%;
+    height: auto;
+    position: static;
+    transform: none;
+  }
+
+  /* Grid-1: Stacked, no borders */
+  .grid-1 {
+    display: block;
+    margin: 1rem 0;
+  }
+  .grid-1 figure {
+    margin: 0.5rem 0;
+    width: 100%;
+    border: none !important; /* Remove 60px border */
+  }
+  .grid-1 figure img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 50px;
+  }
+  .grid-1 h2 {
+    font-size: -1.5em;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  /* Grid-2: Stacked, no borders, no overlaps */
+  .grid-2 {
+    display: block;
+    margin: 8rem 0;
+  }
+  .grid-2 div {
+    margin-bottom: 1.5rem;
+  }
+  .grid-2 figure {
+    margin-right: 100px;
+    width: 100%;
+    border: none !important; /* Remove 60px border */
+  }
+  .grid-2 figure img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 400px;
+    margin-left: 30px;
+    border: rgb(24, 12, 7) solid 30px;
+    
+  }
+  .grid-2 p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0.5rem 1rem;
+    text-align: center;
+  }
+
+  /* Grid-3: Vertical list, smaller font */
+  .grid-3 {
+    display: block;
+    font-size: 1.5em;
+  }
+  .grid-3 div {
+    text-align: center;
+    margin: 0.5rem 0;
+    text-wrap: wrap;
+    
+  }
+
+  /* Footer: Compact logo */
+  footer {
+    padding: 1.5rem 1rem;
+    background-color: #2b241f;
   }
   .footer-logo img {
     width: 100%;
-    max-width: 600px;
+    max-width: 250px;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small phones: Tighter layout */
+  .hero-text {
+    font-size: 29vw;
+  }
+  .mid-tagline {
+    font-size: 0.6rem;
+  }
+  .text-intro {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    padding: 1rem 0.5rem;
+  }
+  .core-section h2 {
+    font-size: 1.3rem;
+  }
+  .core-visual-layout {
+    grid-template-columns: 1fr; /* 1-column for tiny screens */
+    gap: 0.5rem;
+  }
+  .item {
+    height: 100px;
+  }
+  .item-5.center {
+    grid-column: 1 / -1;
+    height: 120px;
+  }
+  .chapter-section h3 {
+    font-size: 1.1rem;
+  }
+  .bird img {
+    width: 40%;
+    max-width: 150px;
+  }
+  .consultancy-title {
+    font-size: 1.3rem;
+  }
+  .consultancy-section p {
+    font-size: 0.8rem;
+  }
+  .banner .content h1 {
+    font-size: 1.8em;
+  }
+  .banner .content .right h2 {
+    font-size: 1.3em;
+  }
+  .banner .image {
+    height: 120px;
+  }
+  .grid-1 h2 {
+    font-size: -8.3em;
+  }
+  .grid-2 p {
+    font-size: 0.8rem;
+  }
+  .grid-3 {
+    font-size: 3.1em;
+    margin-top: -250px;
+    margin-right: 40px;
+  }
+  .footer-logo img {
+    max-width: 200px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablets: Keep computer-like styles, adjust scaling */
+  .hero-text {
+    font-size: 10vw;
+  }
+  .text-intro {
+    font-size: 1.6rem;
+    padding: 2rem 1.5rem;
+  }
+  .core-section h2 {
+    font-size: 2.2rem;
+  }
+  .core-visual-layout {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 90%;
+    height: auto;
+  }
+  .consultancy-title {
+    font-size: 1.8rem;
+  }
+  .banner .content h1 {
+    font-size: 3.5em;
+  }
+  .banner .content .right h2 {
+    font-size: 2.2em;
+  }
+  .footer-logo img {
+    max-width: 400px;
+  }
+    .item-5.center {
+
+    margin-right: -170px;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-  /* Laptops/desktops (e.g., MacBook Air, ~1025px–1440px) */
-  .hero-text {
-    font-size: 25vw;
-  }
-  .text-intro {
-    font-size: 2.5rem;
-    padding: 3.5rem 2rem 10rem;
-  }
-  .core-section h2 {
-    font-size: 3.5rem;
-  }
+  /* Laptops: Fine-tune container sizes */
   .core-visual-layout {
     max-width: 1000px;
   }
-  .consultancy-title {
-    font-size: 2.8rem;
-  }
-  .banner .content h1 {
-    font-size: 12em;
-  }
-  .banner .content .right h2 {
-    font-size: 5em;
+  .consultancy-images {
+    max-width: 900px;
   }
   .footer-logo img {
-    width: 100%;
     max-width: 800px;
   }
 }
 
 @media (min-width: 1441px) {
-  /* Large desktops/MacBooks (e.g., MacBook Pro 16", >1440px) */
+  /* Large desktops/Macs: Cap widths */
   .core-visual-layout {
     max-width: 1400px;
   }
@@ -856,18 +885,6 @@ footer .content{
     max-width: 1200px;
   }
   .footer-logo img {
-    width: 100%;
     max-width: 1000px;
   }
-}
-
-/* Ensure canvas scales properly */
-#connectionCanvas {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Fix potential overflow */
-body {
-  overflow-x: hidden;
 }
