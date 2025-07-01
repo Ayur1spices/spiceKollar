@@ -316,7 +316,7 @@
 
   #image-notch .text-bottom-center {
     bottom: 1.625rem;
-    font-size: clamp(0.75rem, 3.6vw, 1.375rem);
+    font-size: clamp(0.95rem, 3.6vw, 1.375rem);
     max-width: 92%;
   }
 
@@ -430,11 +430,11 @@
   }
 
   #image-notch .content-heading {
-    font-size: clamp(1rem, 4vw, 1.75rem);
+    font-size: clamp(1.5rem, 4vw, 1.75rem);
   }
 
   #image-notch .content-paragraph {
-    font-size: clamp(0.6875rem, 1.8vw, 0.875rem);
+    font-size: clamp(0.7875rem, 1.8vw, 0.875rem);
   }
 }
 
@@ -631,7 +631,7 @@
     background-color: #C6DEC4;
     color: #478860;
     border: none;
-    float: right;
+    
 }
 
 #spice-wheel .content .item {
@@ -770,7 +770,7 @@
     #spice-wheel .content {
         width: 80vw;
         left: 50%;
-        top: 45%;
+        top: 47%;
         transform: translateX(-50%);
         text-align: center;
     }
@@ -779,7 +779,7 @@
     }
     #spice-wheel .content button {
         float: none;
-        margin: -350px -40px;
+        margin: -350px -36px;
     }
     #spice-wheel #prev, #spice-wheel #next {
         font-size: clamp(1rem, 10vw, 2rem);
@@ -794,6 +794,7 @@
         padding-right: 120px;
     }
 }
+
 
 /* end of spicewheel css */
 /* ########################### */
@@ -967,11 +968,12 @@
     align-items: center;
     min-height: 100vh;
     padding: 1rem;
+    height: auto;
 }
 
 #achievements .container {
     width: 100%;
-    max-width: 48rem;
+    max-width: 58rem;
     background-color: transparent;
     box-shadow: none;
     border-radius: 0.75rem;
@@ -1019,7 +1021,7 @@
 #achievements .award-card {
     width: 100%;
     
-    padding: 1.5rem;
+    padding: 2.5rem;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -1088,7 +1090,7 @@
 }
 
 #achievements .award-card:hover .content-hidden {
-    max-height: 200px;
+    max-height: 300px;
     opacity: 1;
 }
 
@@ -1100,8 +1102,8 @@
 }
 
 #achievements .award-image {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
     border-radius: 0.5rem;
     margin-right: 1rem;
@@ -1156,8 +1158,8 @@
 
 @media (max-width: 480px) {
     #achievements .award-image {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 }
 /* ACHIEVEMENTS END */
