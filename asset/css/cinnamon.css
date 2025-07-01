@@ -111,7 +111,7 @@ body {
     gap: 3rem;
 }
 
-.about-image {
+.about-image.is-visible {
     flex: 1 1 300px;
     height: 300px;
     background-image: url(../image/dropcinnamon.png);
@@ -145,7 +145,7 @@ body {
         text-align: center;
     }
 
-    .about-image {
+    .about-image.is-visible {
         width: 100%;
         height: 250px;
     }
@@ -361,7 +361,7 @@ body {
     color: #1b3a27; /* Primary evergreen */
 }
 
-.process-image {
+.process-image.is-visible {
     flex: 1;
     min-width: 300px;
     height: 300px;
@@ -389,14 +389,14 @@ body {
         text-align: center;
     }
 
-    .process-image {
+    .process-image.is-visible {
         height: 250px;
     }
 }
 
 /* Timeline Section */
-.timeline-section {
-    background-image: url('../image/cinnamon-bg.jpg');
+.timeline-section.is-visible {
+    background-image: url('../image/cinnamon-bgs.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -406,8 +406,8 @@ body {
     z-index: 1;
     color: #1b3a27; /* Primary evergreen */
     will-change: background-position;
-    min-height: 100vh;
-    overflow: hidden;
+    min-height: 80vh;
+    overflow: visible;
     background-color: #C6DEC4; /* Soft pale green fallback */
 }
 
@@ -572,7 +572,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .timeline-section {
+    .timeline-section.is-visible {
         padding: 40px 5%;
     }
 
@@ -641,10 +641,12 @@ body {
     border-radius: 30px;
     transition: all 0.3s ease;
 }
+
 .origin-illustration img:hover {
     box-shadow: 0 0 15px rgba(66, 102, 68, 0.7); /* Forest green glow (#426644 with opacity) */
-    transform: scale(1.02); 
+    transform: scale(1.02);
 }
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -742,7 +744,7 @@ body {
 .scroll-fade {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     will-change: opacity, transform;
 }
 
@@ -750,4 +752,3 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
